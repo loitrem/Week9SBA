@@ -5,30 +5,101 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/6f83b941e3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="style/style.css">
-    <title>Document</title>
+    <title>The Simpsons</title>
 </head>
-<body>
-    
-    <nav class="navbar">
-      <ul class="navbar start">
-        <li class="logo">CRM+</li>
-        <li class="item"><a href="#">Home</a></li>
-        <li class="item"><a href="#">Product</a></li>
-        <li class="item has-submenu"><a href="#" tabindex="0">Pricing <i class="fas fa-chevron-down"></i></a>
+<body  onload="quote()">
+  <table id="table_logo_nav">
+    <tr>
+      <td class="table_logo">
+        <img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/b/b7/The_logo_simpsons_yellow.png" alt="">
+        
+      </td>
+    </tr>
+    <tr>
+      <td id="table_nav">
+        <nav class="navbar">
+      <ul class="navbar">
+        <li class="toggle"><a href="#"><i class="fas fa-bars fa-2x"></i></a></li>
+        <li class="item"><a href="index.html">Home</a></li>
+        <li class="item"><a href="episodes.html">Epidode List</a></li>
+        <li class="item"><a href="cast.html">Cast</a></li>
+        <li class="item has-submenu"><a href="#" tabindex="0">Main Characters <i class="fas fa-chevron-down"></i></a>
         <ul class="submenu">
-            <li class="subitem"><a href="#">Home</a></li>
+            <li class="subitem"><a href="#">Home <i class="fas fa-user "></i></a></li>
             <li class="subitem"><a href="#">About</a></li>
             <li class="subitem"><a href="#">Products</a></li>
-        </li></ul>
+        </ul></li>
         
       </ul>  
-        <ul class="navbar end">
-            <li class="item button"><a href="#">Login</a></li>
-            <li class="item button"><a href="#">Register</a></li>
-            <li class="toggle"><a href="#"><i class="fas fa-bars fa-2x"></i></a></li>
-          </ul> 
         </nav>
-        
-</body>
+      </td>
+    </tr>
+  </table>
+    <script src="javascript/process.js"></script>
+      <table class="main_page">
+        <tr>
+          <td class="quote">
+            <h1>Simpsons Quotes</h1>
+        </td>
+      </tr>
+      <tr>
+        <td class="quote">
+          <button type="button" onclick="quote()">Click to get a Quote</button>
+      </td>
+    </tr>
+    <tr>
+      <td class="quote">
+        <div><img id="quote_image" src="" alt=""></div>
+        <div id="quote_name"></div>
+          <div id="quote_quote"></div><br>
+      </td>
+    </tr>
+        <tr>
+          <td>
+            <div id="simpsons" style="display: flex;">
+              <span>
+                <img class="textwrap" id="image" src="" alt="">
+            
+                <h3>History of The Simpsons</h3>
+                <br>
+                  <p>
+                  The Simpsons is an American animated television sitcom starring the animated Simpson family, which was created by Matt Groening. 
+                  He conceived of the characters in the lobby of James L. Brooks's office and named them after his own family members, substituting "Bart" for his own name. 
+                  The family debuted as shorts on The Tracey Ullman Show on April 17, 1987. After a three-season run, the sketch was developed into a half-hour prime time show 
+                  called The Simpsons, which debuted on December 17, 1989. The show was an early hit for Fox, becoming the first Fox series to land in the top 30 ratings in a 
+                  season (1990).
+                </p>
+                <br>
+                <p>
+                  The show was controversial from its beginning and has made the news several times. In the early seasons, some parents characterized Bart as a poor 
+                  role model for children and several United States public schools even banned The Simpsons merchandise and T-shirts. In January 1992, then-President 
+                  George H. W. Bush made a speech during his re-election campaign in which he said: "We are going to keep on trying to strengthen the American family, 
+                  to make American families a lot more like the Waltons and a lot less like the Simpsons." In 2002, the show was nearly sued by the Rio de Janeiro tourist 
+                  board for creating an unreal image of the city on the show.
+                </p>
+                <Br>
+                <p>
+                  The Simpsons Movie, a feature-length film, was released in theaters worldwide on July 26 and July 27, 2007. Previous attempts to create a film version of 
+                  The Simpsons failed due to the lack of a script of appropriate length and production crew members. Eventually, producers Brooks, Groening, Al Jean, Mike Scully, 
+                  and Richard Sakai began development of the film in 2001. They conceived numerous plot ideas, with Groening's being the one developed into a film. The script was 
+                  re-written over a hundred times, and this creativity continued after animation had begun in 2006. The film was a box office success, and received overwhelmingly 
+                  positive reviews.
+                </p>
+                  <br>
+                  <p>
+                  The Simpsons eventually became the longest-running American sitcom, the longest-running American animated program, and in 2009 it surpassed Gunsmoke as the 
+                  longest-running American primetime, scripted television series.[1] Since its debut on December 17, 1989, the show has broadcast 704 episodes and its 32nd season 
+                  started airing on September 27, 2020.
+                 </p>
+                 
+            </div>
+          </div>
+          </td>
+      </tr>
+      </table>
+      
+
+    </body> 
 </html>

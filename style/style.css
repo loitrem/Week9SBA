@@ -4,57 +4,88 @@
     margin: 0;
 }
 body {
-    font-family: sans-serif;
+    font-family:  sans-serif;
     font-size: 16px;
+    margin: 2rem;
+}
+.main_page {
+  display: flex;
+  padding: 2rem;
+  border-spacing: 1em;
+  border: 1px solid black; 
 }
 
+
+#logo {
+  width: 350px;
+}
+#table_logo_nav {
+  width: 100%;
+  border: 0;
+  padding: 0;
+  border-spacing: 0;
+  border: 1px solid black;
+}
+td.table_logo {
+  background-image: url(../images/simpsons_clouds.jpg);
+  background-size: 500px;
+  padding: 1em;
+  
+}
 .navbar {
     display: flex;
     font-size: 20px;
     font-weight: 700;
     flex-flow: row nowrap;
-    align-items: baseline;
+    justify-content: space-evenly;
     list-style: none;
     margin: 0; 
-    background: deepskyblue;
+    background: rgb(40, 47, 49);
     width: 100%;
+    padding: 0.5rem;
+    align-items: center;
   }
-
+.quote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+}
+#quote_image {
+  height: 200px;
+}
+#quote_name {
+font-weight: bold;
+font-size: 26px;
+}
   .toggle {
     display: none;
   }
-
+.textwrap {
+  float: left;
+  margin: 20px;
+}
   .logo {
     font-size: 30px;
     font-style: italic;
     font-weight: bold;
     display: block;
-    padding: 1em;
     color: white;
-  }
-  
-  .start {
-    flex: 2;
-    justify-content: flex-start;
-  }
-
-  .end {
-    flex: 1;
-    justify-content: flex-end;
-    
   }
 
   .navbar a {
     text-decoration: none;
     display: block;
-    padding: 1em;
+    padding: 0.5rem;
     color: white;
 
   }
   
   .navbar a:hover {
-    background: #1565C0;
-    border-radius: 15px;
+    background: #6b7075;
+    border-radius: 25px;
   }
 
   .active .item {
@@ -71,12 +102,17 @@ body {
     display: block;
 }
 
-
+@media all and (max-width: 800px) {
+  #logo {
+    width: 250px;
+  }
+}
   
-  @media all and (max-width: 800px) {
+  @media all and (max-width: 600px) {
     .navbar {
       flex-flow: row nowrap;
       padding: 0;
+      justify-content: flex-start;
     }
     .navbar a { 
         text-decoration: none;
@@ -94,10 +130,14 @@ body {
       border-bottom: none;
     }
 
+    #logo {
+      width: 150px;
+    }
 
     .toggle {
         order: 1;
         display: contents;
+       
         
     }
 
