@@ -1,0 +1,11 @@
+[
+    {
+        "Name": "Bart Simpson",
+        "Age": "10",
+        "Catchphrase": "Aye Carumba!, Eat my shorts, I didn't do it!",
+        "Hobbies": "Causing trouble (eg making prank calls to Moes Tavern), Watching TV, skateboarding",
+        "Image": "./images/Bart_Simpson_200px.png",
+        "Occupation": "4th grade student at Springfield Elementary School"
+        
+    }
+]

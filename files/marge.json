@@ -1,0 +1,11 @@
+[
+    {
+        "Name": "Marge Simpson",
+        "Age": "34",
+        "Catchphrase": "Murmur/groan/nagging",
+        "Hobbies": "Knitting, loom",
+        "Image": "./images/MargeSimpson.png",
+        "Occupation": "Housewife/homemaker"
+        
+    }
+]

@@ -1,0 +1,11 @@
+[
+    {
+        "Name": "Lisa Simpson",
+        "Age": "8",
+        "Catchphrase": "If anyone wants me I'll be in my room",
+        "Hobbies": "Playing saxophone",
+        "Image": "./images/Lisa_Simpson.png",
+        "Occupation": "2nd grade student at Springfield Elementary School"
+        
+    }
+]

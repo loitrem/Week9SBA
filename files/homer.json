@@ -1,0 +1,11 @@
+[
+    {
+        "Name": "Homer Simpson",
+        "Age": "38",
+        "Catchphrase": "D'oh!, Mmm..., and Woohoo!",
+        "Hobbies": "Watching TV, drinking beer, eating...",
+        "Image": "./images/Homer_Simpson.png",
+        "Occupation": "Safety Inspector (Sector 7G) at Springfield Nuclear Power Plant"
+        
+    }
+]
