@@ -11,6 +11,9 @@ body {
 
 }
 .body_div {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
   width: 100%;
   padding: 0;
   border-spacing: 0;
@@ -31,9 +34,7 @@ body {
  .char_display {
   display: flex;
   flex-flow: column;
-  align-items: center;
-  
-  
+  align-items: center;  
  } 
   
 
@@ -47,9 +48,8 @@ body {
 .episode_table, tr, td {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-evenly;  
   padding: 10px;
-  
 }
 .quote div{
   display: flex;

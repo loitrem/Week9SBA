@@ -71,6 +71,7 @@ getEpisodeInfo.onreadystatechange = function() {
   for (let i = 0; i < episodeInfo.length; i++) {
     // creates a table row
     let row = document.createElement("tr");
+    row.setAttribute("style", "border: 1px solid black;");
 
     
       // Create a <td> element and a text node, make tde text
@@ -79,7 +80,6 @@ getEpisodeInfo.onreadystatechange = function() {
 
       let cellImg = document.createElement("td");
       cellImg.setAttribute("width", "250px");
-      cellImg.setAttribute("style", "");
       let img = document.createElement("img");
       img.setAttribute("src", episodeInfo[i].image.medium);
    
