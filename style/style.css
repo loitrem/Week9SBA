@@ -1,5 +1,5 @@
 body {
-    font-family:  sans-serif;
+    font-family:  'roboto';
     font-size: 16px;
     margin: 2rem;
     border: 1px solid black;
@@ -77,6 +77,7 @@ body {
 
 #logo {
   width: 350px;
+  padding: 1em;
 }
 .navbar {
     display: flex;
@@ -96,7 +97,7 @@ body {
 .header_logo {
   background-image: url(../images/simpsons_clouds.jpg);
   background-size: 500px;
-  padding: 1em;
+  
   justify-content: space-evenly;
   width: 100%;
   border-spacing: 0;
