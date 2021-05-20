@@ -107,7 +107,7 @@
             const addChar = (fav)=>{
                 fav.preventDefault();// stop form from submitting
 
-                let answer = document.getElementById('fav_character').value.trim;
+                let answer = document.getElementById('fav_character').value;
                 console.log(answer);
                 //regex so that only letters can be used to answer upper or lower case
                 let re = new RegExp(/^[a-zA-Z][a-zA-Z\s]*$/);
