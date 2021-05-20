@@ -2,7 +2,7 @@
 Perscholas week 9 - HTML, CSS, JavaScript SBA
 <hr>
 
-**A live link to this website can be accessed here: [http://loitrem.publicvm.com/week9sba/](http://loitrem.publicvm.com/week9sba/)**
+**A live link to this website can be accessed here: [http://loitrem.ddns.net/week9sba/](http://loitrem.ddns.net/week9sba/)**
 <hr>
 
 ## Project Description

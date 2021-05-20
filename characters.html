@@ -18,7 +18,7 @@
       <div style="padding-bottom: 10px;">
         <nav>
         <ul class="navbar menu">
-        <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+        <li class="toggle"><a href="#"><i class="fas fa-bars fa-2x"></i></a></li>
         <li class="item"><a href="index.html">Home</a></li>
         <li class="item"><a href="episodes.html">Epidode List</a></li>
         <li class="item has-submenu"><a href="characters.html" tabindex="0">Main Characters</a>
@@ -26,24 +26,29 @@
         </ul>  
           </nav>
       </div> 
-      <div id="letUsKnow" style="display: flex; justify-content: space-evenly; padding: 0.5em; padding: 15px;">
+      <div id="letUsKnow" style="display: flex; align-content: center; justify-content: center; padding: 25px;">
           <form id="favorite" method="GET" action="characters.html">
-              <table style="width: 50%; border: 1px solid black;">
+              <table style="border: 1px solid black; border-spacing: 0;">
                   <tr>
-                      <td style="font-weight: bold; justify-content: center;">Who is your Favorite Simpsons Character?</td>
-                      <td><input id="fav_character" type="text" size="20"></td>
-                      <td><input id="submit" type="submit" value="Tell Us" size="20"></td>
+                      <td colspan="2" style="font-weight: bold; justify-content: center; background-color: rgb(40, 47, 49); color: white; padding: 10px;">
+                        Who is your Favorite Simpsons Character?</td>
+                  </tr>    
+                    <tr>
+                      <td style="padding: 10px;"><input id="fav_character" type="text" size="20" style="border-radius: 15px; padding: 5px;"></td>
+                      <td style="padding: 10px;"><input class="btn" id="submit" type="submit" value="Tell Us" size="20" style="border-radius: 15px; padding: 5px;"></td>
                   </tr>
               </table>
           </form>
-          <div style="justify-content: flex-end;">
+        </div>
+        
+          <div style="justify-content: center;">
           <form method="GET" action="characters.html">
-            <table id="selectTable" style="width: 100%; border: 1px solid black;">
+            <table id="selectTable" style="width: 100%; justify-content: center;">
                 <tr>
-                    <td style="font-weight: bold;">Select a Character to View</td>
+                    <td style="font-weight: bold; padding: 10px;">Select a Character to View</td>
                 </tr>
                 <tr>
-                    <td><select id="characterSelect" onchange="getValue()">
+                    <td style="padding: 10px;"><select class="btn" style="width: 200px;" id="characterSelect" onchange="getValue()">
                         <option value="homer">Homer</option>
                         <option value="marge">Marge</option>
                         <option value="bart">Bart</option>
@@ -52,18 +57,18 @@
                     </select></td>
                 </tr>                
             </table>
-        </form></div>
-      </div>
+        </form>
+    </div>
+      
   </div>
       
     
     <div id="container" class="container_characters" style="padding: 2em;">
         <div class=container_inside></div>
-            
         
         
         <div class="char_display">
-            <div><img id="char_image" src="" alt="" style="width: 200px;"></div>           
+            <div><img id="char_image" src="" alt="" style="height: 200px;"></div>           
             <div id="char_name"></div>
             <div id="char_age"></div>
             <div id="char_occupation"></div>
@@ -74,7 +79,7 @@
   </div>
 
   <script>
-
+    //gets information saved in a  json file and displays it
     function getValue(){
         let selectedValue = document.getElementById("characterSelect").value;
 
@@ -83,12 +88,13 @@
         getCharacter.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
                 let parsedCharacter = JSON.parse(this.responseText); 
+                //displays information by id of the div
                 document.getElementById("char_image").src = parsedCharacter[0].Image;
-                document.getElementById("char_name").innerHTML = "Name: " + parsedCharacter[0].Name;
-                document.getElementById("char_age").innerHTML = "Age: " + parsedCharacter[0].Age;
-                document.getElementById("char_catchphrase").innerHTML = "Catchphrase: " + parsedCharacter[0].Catchphrase;
-                document.getElementById("char_hobbies").innerHTML = "Hobbies: " + parsedCharacter[0].Hobbies;
-                document.getElementById("char_occupation").innerHTML = "Occupation: " + parsedCharacter[0].Occupation;
+                document.getElementById("char_name").innerHTML = "<strong>Name</strong>: " + parsedCharacter[0].Name;
+                document.getElementById("char_age").innerHTML = "<strong>Age</strong>: " + parsedCharacter[0].Age;
+                document.getElementById("char_catchphrase").innerHTML = "<strong>Catchphrase</strong>: " + parsedCharacter[0].Catchphrase;
+                document.getElementById("char_hobbies").innerHTML = "<strong>Hobbies</strong>: " + parsedCharacter[0].Hobbies;
+                document.getElementById("char_occupation").innerHTML = "<strong>Occupation</strong>: " + parsedCharacter[0].Occupation;
                 }
             };
             console.log(selectedValue);
@@ -96,22 +102,24 @@
             getCharacter.send();
         }
 
+            //takes your answer to your favorite character and saves the data to local storage
             let favCharacter = [];
             const addChar = (fav)=>{
                 fav.preventDefault();// stop form from submitting
 
-                let answer = document.getElementById('fav_character').value;
+                let answer = document.getElementById('fav_character').value.trim;
                 console.log(answer);
-                
-                let re = new RegExp(/^[a-z][a-z\s]*$/);
+                //regex so that only letters can be used to answer upper or lower case
+                let re = new RegExp(/^[a-zA-Z][a-zA-Z\s]*$/);
+                //if nothing was typed
                 if(answer==""){
                     let message = "Answer can only be Letters. Cannot be empty.";
                     alert(message);
-                }
+                } // if what was typed does not match regex
                 else if(!re.test(answer)){
                     let message = "Answer can only be Letters. you wrote: " + answer;
                     alert(message);
-                }
+                }// if what was typed does match regex
                 else{
 
                 let input = {

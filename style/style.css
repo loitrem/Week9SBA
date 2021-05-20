@@ -4,6 +4,20 @@ body {
     margin: 2rem;
     border: 1px solid black;
 }
+.btn {
+  font-weight: 700;
+  border: 2px solid black;
+  background-color: skyblue; 
+  border-radius: 15px; 
+  padding: 5px;
+}
+.btn:hover {
+  font-weight: 700;
+  border: 2px solid black;
+  background-color: yellow;
+  border-radius: 15px; 
+  padding: 5px;
+}
 .main_page {
   display: flex;
   padding: 2rem;
@@ -19,13 +33,6 @@ body {
   border-spacing: 0;
   
 }
-.header_logo_container {
-  justify-content: space-evenly;
-  width: 100%;
-  padding: 0;
-  border-spacing: 0;
-}
-
 .container {
   display: flex;
   justify-content: flex-start;
@@ -34,7 +41,7 @@ body {
  .char_display {
   display: flex;
   flex-flow: column;
-  align-items: center;  
+  align-items: center; 
  } 
   
 
@@ -45,7 +52,7 @@ body {
   align-content: center;  
 }
 
-.episode_table, tr, td {
+.episode_table tr td {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;  
@@ -81,7 +88,7 @@ body {
     margin: 0; 
     background: rgb(40, 47, 49);
     padding: 0.5rem;
-    align-items: center;
+    align-items: flex-start;
     border: 0;
     
 
@@ -90,7 +97,9 @@ body {
   background-image: url(../images/simpsons_clouds.jpg);
   background-size: 500px;
   padding: 1em;
-  
+  justify-content: space-evenly;
+  width: 100%;
+  border-spacing: 0;
 }
 
 
@@ -143,9 +152,10 @@ font-size: 26px;
   @media all and (max-width: 600px) {
     .navbar {
       flex-flow: column;
-      padding: 0;
-      
-      
+      align-content: flex-start;
+      justify-content: left;
+      justify-items: left;
+      padding: 0;     
     }
     .navbar a { 
         text-decoration: none;
@@ -171,6 +181,7 @@ font-size: 26px;
         
         display: flex;
         width: 25px;
+        justify-content: left;
         
     }
 

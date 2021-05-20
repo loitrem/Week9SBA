@@ -1,16 +1,16 @@
 // const variables for drop down menu for small screens
 const toggle = document.querySelector('.toggle');
-const menu = document.querySelector('.menu');
+const navBar = document.querySelector('.navbar');
 
 //toggle menu function
 function toggleMenu(){
-  if (menu.classList.contains("active")){
-    menu.classList.remove("active");
-    toggle.querySelector("a").innerHTML = "<i class='fas fa-bars'></i>";
+  if (navBar.classList.contains("active")){
+    navBar.classList.remove("active");
+    toggle.querySelector("a").innerHTML = "<i class='fas fa-bars fa-2x'></i>";
   }
   else{
-    menu.classList.add("active");
-    toggle.querySelector("a").innerHTML = "<i class='fas fa-times'></i>"
+    navBar.classList.add("active");
+    toggle.querySelector("a").innerHTML = "<i class='fas fa-times fa-2x'></i>"
   }
 }
 
@@ -34,8 +34,10 @@ getQuote.open("GET", "https://thesimpsonsquoteapi.glitch.me/quotes", true);
 getQuote.send();
  }
 
+
+ //get the simpsons image from an API. API is from = http://api.tvmaze.com/shows/83
  function image(){
-//get the simpsons image from an API. API is from = http://api.tvmaze.com/shows/83
+
 let getSimpsonsInfo = new XMLHttpRequest();
 getSimpsonsInfo.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
@@ -50,6 +52,8 @@ getSimpsonsInfo.send();
 
  }
 
+
+ // displays a list of all simpsons episodes
 function episodes() {
     
   let getEpisodeInfo = new XMLHttpRequest();
@@ -71,9 +75,8 @@ getEpisodeInfo.onreadystatechange = function() {
   for (let i = 0; i < episodeInfo.length; i++) {
     // creates a table row
     let row = document.createElement("tr");
-    row.setAttribute("style", "border: 1px solid black;");
+    row.setAttribute("id", "ep_r");
 
-    
       // Create a <td> element and a text node, make tde text
       // node tde contents of tde <td>, and put tde <td> at
       // tde end of tde table row
@@ -97,7 +100,7 @@ getEpisodeInfo.onreadystatechange = function() {
       row.appendChild(cellEpisode);
 
       let cellName = document.createElement("td");
-      let name = document.createTextNode("Episode: " + episodeInfo[i].name);
+      let name = document.createTextNode("Episode Name: " + episodeInfo[i].name);
       cellName.appendChild(name);
       row.appendChild(cellName);
 
